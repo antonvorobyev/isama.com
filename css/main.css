@@ -4,11 +4,16 @@ body {
     font-family: serif;
 }
 
-header,
-.section0,
-footer {
+.page > header,
+.slider,
+.about,
+.service,
+.portfolio,
+.team,
+.contact
+.page > footer {
     height: 766px;
-    min-width: 985px;
+    min-width: 992px;
     box-sizing: border-box;
 }
 
@@ -16,7 +21,6 @@ h1,
 h2,
 .subheading {
     font-family: sans-serif;
-    text-transform: uppercase;
 }
 
 a {
@@ -29,41 +33,398 @@ a:hover {
     text-decoration: underline;
 }
 
-header {
+.page > header {
 }
 
-header .logo {
-    position: relative;
-    top: 50px;
-    left: 50px;
-    display: block;
-    height: 48px;
-    width: 48px;
+.page > header h1 {
+    display: inline-block;
+    width: 400px;
+    height: 95px;
 }
 
-header nav ul {
+.page > header h1 .logo img {
+    width: 400px;
+    height: 95px;
+}
+
+.page > header h1 .logo strong {
+    visibility: hidden;
+}
+
+/*header .logo {*/
+/*position: relative;*/
+/*top: 50px;*/
+/*left: 50px;*/
+/*display: block;*/
+/*height: 48px;*/
+/*width: 48px;*/
+/*}*/
+
+.page > header nav ul {
     list-style: none;
 }
 
-header nav ul li a {
-    font-size: 18px;
-}
-
-header .title {
-    position: relative;
-    top: 45%;
-    left: 40%;
-}
-
-header .title h1 {
-    font-size: 65px;
-    letter-spacing: 14px;
+.page > header nav.external ul.social,
+.page > header nav.external ul.resources {
     display: inline-block;
 }
 
-header .title .subheading {
-    font-size: 25px;
-    letter-spacing: 1px;
+.page > header nav.external ul.resources li {
+    width: 98px;
+    height: 32px;
+    display: inline-block;
+}
+
+.page > header nav.external ul.resources li a {
+    width: 98px;
+    height: 32px;
+}
+
+.page > header nav.external ul.social {
+    float: right;
+}
+
+.page > header nav.external ul.social li {
+    width: 65px;
+    height: 65px;
+    display: inline-block;
+}
+
+.page > header nav.external ul.social li a {
+    width: 65px;
+    height: 65px;
+}
+
+.page > header ul.contact {
+    list-style: none;
+    display: inline-block;
+    float: right;
+}
+
+.page > header ul.contact li {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+}
+
+.page > header ul.contact li a {
+    width: 70px;
+    height: 70px;
+}
+
+.page > header ul.contact li a span {
+    /*visibility: hidden;*/
+}
+
+.page > header nav.internal ul {
+    list-style: none;
+    display: inline-block;
+}
+
+.page > header nav.internal ul li {
+    display: inline-block;
+    padding: 40px 30px;
+}
+
+.page > header nav.internal form.search {
+    float: right;
+    height: 30px;
+    width: 210px;
+}
+
+.page > header nav.internal form.search input {
+    height: 30px;
+    width: 170px;
+    float: right;
+}
+
+.page > header nav.internal form.search button {
+    height: 30px;
+    width: 30px;
+    float: left;
+}
+
+/*header .title {*/
+/*position: relative;*/
+/*top: 45%;*/
+/*left: 40%;*/
+/*}*/
+
+/*header .title h1 {*/
+/*font-size: 65px;*/
+/*letter-spacing: 14px;*/
+/*display: inline-block;*/
+/*}*/
+
+/*header .title .subheading {*/
+/*font-size: 25px;*/
+/*letter-spacing: 1px;*/
+/*}*/
+
+ul.slider {
+    height: 890px;
+    list-style: none;
+    padding: 0;
+    position: relative;
+}
+
+ul.slider li {
+    display: inline-block;
+    width: 320px;
+    height: 240px;
+    border: dotted;
+    position: absolute;
+}
+
+ul.slider li:nth-child(2) {
+    right: 370px;
+    bottom: 50px;
+}
+
+ul.slider li:nth-child(3) {
+    right: 50px;
+    bottom: 50px;
+}
+
+ul.slider li h2,
+ul.slider li p.subheading {
+    visibility: hidden;
+    width: 0;
+}
+
+ul.slider li a.like {
+    display: inline-block;
+    width: 100%;
+    height: 65px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    line-height: 65px;
+    text-align: center;
+}
+
+ul.slider li.active {
+    width: 100%;
+    height: 890px;
+    display: table;
+    right: auto;
+    bottom: auto;
+}
+
+ul.slider li.active a.like {
+    visibility: hidden;
+}
+
+ul.slider li.active p.subheading {
+    position: relative;
+    margin: 0 auto;
+    width: 300px;
+    display: table-cell;
+    vertical-align: middle;
+    visibility: visible;
+}
+
+.about {
+    height: 380px;
+    text-align: center;
+}
+
+.about > div {
+    vertical-align: top;
+    width: 390px;
+    display: inline-block;
+    text-align: left;
+    padding-left: 200px;
+}
+
+.about > div p {
+    text-align: justify;
+}
+
+.service {
+    height: 922px;
+}
+
+.service > header {
+    margin: 0 auto;
+    width: 410px;
+    padding-left: 170px;
+    margin-bottom: 80px;
+}
+
+.service ul {
+    text-align: center;
+}
+
+.service ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+}
+
+.service ul li dl dt,
+.service ul li dl dd {
+    width: 380px;
+    padding-left: 170px;
+    margin: 0;
+    /*display: inline-block;*/
+    /*float: left;*/
+}
+
+.service ul li dl dt {
+    margin-bottom: 20px;
+    text-align: left;
+
+}
+
+.service ul li dl dd {
+    margin-bottom: 80px;
+    text-align: justify;
+    /*clear: both;*/
+}
+
+.portfolio {
+    height: 1070px;
+}
+
+.portfolio > header {
+    margin: 0 auto;
+    width: 410px;
+    padding-left: 170px;
+    margin-bottom: 80px;
+}
+
+.portfolio ul.categories {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.portfolio ul.categories li,
+.portfolio ul.categories li a {
+    height: 45px;
+    padding: auto 45px;
+    margin: auto 7px;
+    display: inline-block;
+}
+
+.portfolio div.projects {
+    text-align: center;
+}
+
+.portfolio div.projects ul {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    width: 1188px;
+    /*text-align: center;*/
+}
+
+.portfolio div.projects ul li {
+    display: inline-block;
+    height: 285px;
+    width: 280px;
+    margin: 7px;
+}
+
+.portfolio div.projects ul li a.preview {
+    display: inline-block;
+    height: 210px;
+    width: 250px;
+}
+
+.portfolio div.projects ul li a.preview img {
+    height: 210px;
+    width: 250px;
+}
+
+.portfolio div.projects ul li div.actions a {
+    text-align: center;
+    display: inline-block;
+    width: 49%;
+    height: 55px;
+}
+
+.team {
+    height: 770px;
+}
+
+.team > header {
+    margin: 0 auto;
+    width: 410px;
+    padding-left: 170px;
+    margin-bottom: 80px;
+}
+
+.team ul.members {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.team ul.members > li {
+    display: inline-block;
+    height: 395px;
+    width: 280px;
+}
+
+.team ul.members > li > a {
+    display: inline-block;
+    height: 305px;
+    width: 280px;
+}
+
+.team ul.members > li > a img {
+    width: 140px;
+    height: 140px;
+    display: block;
+    margin: auto;
+}
+
+.team ul.members > li > a span.name {
+    display: block;
+}
+
+.team ul.members > li ul.social {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.team ul.members > li ul.social li {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.team ul.members > li ul.social li a {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.team ul.members > li ul.social li a span {
+    visibility: hidden;
+}
+
+.contact {
+    height: 500px;
+}
+
+.contact ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.contact ul li {
+    display: inline-block;
+    height: 65px;
+    width: 65px;
+}
+
+.contact ul li > div {
+    visibility: hidden;
 }
 
 .section0 {
@@ -99,14 +460,85 @@ header .title .subheading {
     background: #d92b48;
 }
 
-footer {
-    text-align: center;
-    padding-top: 50px;
-    height: 150px;
+.page > footer {
+    padding-top: 75px;
+    height: 265px;
 }
 
-footer .copyright {
-    display: inline-block;
-    font-size: 12px;
-    color: grey;
+.page > footer nav.external {
+    width: 100%;
 }
+
+.page > footer nav.external ul.social {
+    list-style: none;
+    padding: 0;
+    width: 500px;
+    float: left;
+}
+
+.page > footer nav.external ul.social li {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 20px;
+}
+
+.page > footer nav.external ul.social li a {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.page > footer nav.external ul.social li a span {
+    /*visibility: hidden;*/
+}
+
+.page > footer nav.external form.subscription {
+    position: relative;
+    width: 595px;
+    height: 65px;
+    float: right;
+}
+
+.page > footer nav.external form.subscription input {
+    width: 255px;
+    height: 45px;
+}
+
+.page > footer nav.external form.subscription button {
+    position: absolute;
+    right: 0;
+    height: 45px;
+    padding: 0 25px;
+}
+
+.page > footer p.copyright {
+    width: 400px;
+    float: left;
+}
+
+.page > footer nav.external ul.resources {
+    list-style: none;
+    padding: 0;
+    float: right;
+}
+
+.page > footer nav.external ul.resources li {
+    display: inline-block;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*.page > footer .copyright {*/
+    /*display: inline-block;*/
+    /*font-size: 12px;*/
+    /*color: grey;*/
+/*}*/
