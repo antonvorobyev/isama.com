@@ -4,17 +4,34 @@ body {
     font-family: serif;
 }
 
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border-style: none;
+    text-align: center;
+}
+
 .page > header,
 .slider,
 .about,
 .service,
 .portfolio,
 .team,
-.contact
+.contacts
 .page > footer {
     height: 766px;
     min-width: 992px;
     box-sizing: border-box;
+}
+
+.container {
+    width: 992px;
+    margin: 0 auto;
+    position: relative;
 }
 
 h1,
@@ -34,6 +51,7 @@ a:hover {
 }
 
 .page > header {
+    height: auto;
 }
 
 .page > header h1 {
@@ -45,6 +63,10 @@ a:hover {
 .page > header h1 .logo img {
     width: 400px;
     height: 95px;
+    line-height: 95px;
+    font-family: "Open Sans Regular";
+    font-size: 41px;
+    color: #3687c4;
 }
 
 .page > header h1 .logo strong {
@@ -60,8 +82,10 @@ a:hover {
 /*width: 48px;*/
 /*}*/
 
-.page > header nav ul {
-    list-style: none;
+.page > header nav.external {
+    background: #eceef4;
+    height: 65px;
+    line-height: 65px;
 }
 
 .page > header nav.external ul.social,
@@ -76,8 +100,16 @@ a:hover {
 }
 
 .page > header nav.external ul.resources li a {
+    color: #6d6e71;
+    display: inline-block;
+    background: white;
     width: 98px;
     height: 32px;
+    line-height: 32px;
+    text-align: center;
+
+    font-family: "Open Sans Bold";
+    font-size: 12px;
 }
 
 .page > header nav.external ul.social {
@@ -87,7 +119,12 @@ a:hover {
 .page > header nav.external ul.social li {
     width: 65px;
     height: 65px;
+    border-left: 1px #dee0e6 solid;
     display: inline-block;
+}
+
+.page > header nav.external ul.social li:last-child {
+    border-right: 1px #dee0e6 solid;
 }
 
 .page > header nav.external ul.social li a {
@@ -95,53 +132,100 @@ a:hover {
     height: 65px;
 }
 
-.page > header ul.contact {
-    list-style: none;
+.page > header nav.external ul.social li a span {
+    visibility: hidden;
+}
+
+.page > header ul.contacts {
     display: inline-block;
     float: right;
 }
 
-.page > header ul.contact li {
+.page > header ul.contacts li {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border-right: 1px solid #bcbec3;
+    font-family: "Open Sans Light", sans-serif;
+    font-size: 16px;
+}
+
+.page > header ul.contacts li:last-child {
+    border: none;
+}
+
+.page > header ul.contacts li a {
     display: inline-block;
     width: 70px;
     height: 70px;
 }
 
-.page > header ul.contact li a {
-    width: 70px;
-    height: 70px;
+.page > header ul.contacts li a span {
+    visibility: hidden;
+    display: none;
 }
 
-.page > header ul.contact li a span {
-    /*visibility: hidden;*/
+.page > header nav.internal {
+    position: relative;
+    border-top: 1px solid #eceef4;
 }
 
 .page > header nav.internal ul {
-    list-style: none;
-    display: inline-block;
+    width: 800px;
 }
 
 .page > header nav.internal ul li {
     display: inline-block;
-    padding: 40px 30px;
+    padding: 10px 10px;
+    border-right: 1px solid #eceef4;
+}
+
+.page > header nav.internal ul li a {
+    color: #6d6e71;
+    font-family: "Open Sans Bold", sans-serif;
+    font-size: 13px;
+}
+
+.page > header nav.internal ul li.active a {
+    color: #1faae2;
 }
 
 .page > header nav.internal form.search {
-    float: right;
     height: 30px;
     width: 210px;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 .page > header nav.internal form.search input {
     height: 30px;
     width: 170px;
     float: right;
+    border: none;
+    color: #6d6e71;
+    font-family: "Open Sans Regular", sans-serif;
+    font-size: 15px;
+}
+
+.page > header nav.internal form.search input::-webkit-input-placeholder,
+.page > header nav.internal form.search input::-moz-placeholder,
+.page > header nav.internal form.search input:-ms-input-placeholder {
+    color: #6d6e71;
+    font-family: "Open Sans Light", sans-serif;
+    font-size: 15px;
+}
+
+.page > header nav.internal form.search input:focus {
+    outline: 0;
 }
 
 .page > header nav.internal form.search button {
     height: 30px;
     width: 30px;
     float: left;
+    background: transparent;
+    border: none;
 }
 
 /*header .title {*/
@@ -163,8 +247,6 @@ a:hover {
 
 ul.slider {
     height: 890px;
-    list-style: none;
-    padding: 0;
     position: relative;
 }
 
@@ -172,18 +254,32 @@ ul.slider li {
     display: inline-block;
     width: 320px;
     height: 240px;
-    border: dotted;
     position: absolute;
+}
+
+ul.slider li:nth-child(1) {
+    background: #318fcd;
 }
 
 ul.slider li:nth-child(2) {
     right: 370px;
     bottom: 50px;
+    background: #75bf29;
+
 }
 
 ul.slider li:nth-child(3) {
     right: 50px;
     bottom: 50px;
+    background: #feeb75;
+}
+
+ul.slider li:nth-child(2) a.like {
+    color: white;
+}
+
+ul.slider li:nth-child(3) a.like {
+    color: #cc9800;
 }
 
 ul.slider li h2,
@@ -201,13 +297,17 @@ ul.slider li a.like {
     left: 0;
     line-height: 65px;
     text-align: center;
+    font-family: "Open Sans Semibold", sans-serif;
+    font-size: 14px;
+
 }
 
 ul.slider li.active {
     width: 100%;
     height: 890px;
     display: table;
-    right: auto;
+    position: absolute;
+    left: auto;
     bottom: auto;
 }
 
@@ -215,76 +315,142 @@ ul.slider li.active a.like {
     visibility: hidden;
 }
 
+ul.slider li p.subheading {
+    color: white;
+}
+
+ul.slider li p.subheading strong {
+    display: block;
+    font-family: "Open Sans Bold", sans-serif;
+    font-size: 58px;
+}
+
+ul.slider li p.subheading span {
+    font-family: "Open Sans Light", sans-serif;
+    font-size: 45px;
+}
+
 ul.slider li.active p.subheading {
     position: relative;
-    margin: 0 auto;
-    width: 300px;
+    /*margin: 0 auto;*/
+    /*width: auto;*/
+    text-align: center;
     display: table-cell;
     vertical-align: middle;
     visibility: visible;
 }
 
+ul.slider li.active p.subheading strong {
+    position: relative;
+    left: -30px;
+    z-index: 2;
+    text-transform: uppercase;
+}
+
+ul.slider li.active p.subheading span {
+    position: relative;
+    left: 60px;
+    z-index: 1;
+}
+
+ul.slider li.active p.subheading span:before {
+    content: '&';
+    color: #bbedff;
+    position: relative;
+    left: -20px;
+    font-family: "Open Sans Bold", sans-serif;
+    font-size: 140px;
+    line-height: 10px;
+    z-index: 1;
+}
+
 .about {
     height: 380px;
     text-align: center;
+    color: #6d6e71;
 }
 
-.about > div {
+.about div.container > div {
     vertical-align: top;
     width: 390px;
     display: inline-block;
     text-align: left;
-    padding-left: 200px;
+    padding-left: 100px;
 }
 
-.about > div p {
+.about div.container > div h2 {
+    font-family: "Open Sans Bold", sans-serif;
+    font-size: 26px;
+}
+
+.about div.container > div p {
     text-align: justify;
+    font-family: "Open Sans Light", sans-serif;
+    font-size: 16px;
+    color: #6d6e71;
 }
 
 .service {
     height: 922px;
+    color: #6d6e71;
 }
 
-.service > header {
+.service div.container > header {
     margin: 0 auto;
     width: 410px;
     padding-left: 170px;
     margin-bottom: 80px;
 }
 
-.service ul {
+.service div.container > header h2 {
+    font-family: "Open Sans Bold", sans-serif;
+    font-size: 44px;
+}
+
+.service div.container > header p.subheading {
+    font-family: "Open Sans Light", sans-serif;
+    font-size: 17px;
+}
+
+.service div.container ul {
     text-align: center;
 }
 
-.service ul li {
+.service div.container ul li {
     list-style: none;
     display: inline-block;
     padding: 0;
 }
 
-.service ul li dl dt,
-.service ul li dl dd {
+.service div.container ul li dl dt,
+.service div.container ul li dl dd {
     width: 380px;
-    padding-left: 170px;
+    padding-left: 100px;
     margin: 0;
     /*display: inline-block;*/
     /*float: left;*/
 }
 
-.service ul li dl dt {
+.service div.container ul li dl dt {
     margin-bottom: 20px;
     text-align: left;
-
+    font-family: "Open Sans Bold", sans-serif;
+    font-size: 24px;
 }
 
-.service ul li dl dd {
+.service div.container ul li dl dd {
     margin-bottom: 80px;
     text-align: justify;
+    font-family: "Open Sans Light", sans-serif;
+    font-size: 16px;
+
     /*clear: both;*/
 }
 
 .portfolio {
     height: 1070px;
+    background: #efefef;
+    position: relative;
 }
 
 .portfolio > header {
@@ -292,20 +458,47 @@ ul.slider li.active p.subheading {
     width: 410px;
     padding-left: 170px;
     margin-bottom: 80px;
+    color: #6d6e71;
+}
+
+.portfolio > header h2 {
+    font-family: "Open Sans Bold", sans-serif;
+    font-size: 44px;
+}
+
+.portfolio > header h2 p.subheading {
+    font-family: "Open Sans Light", sans-serif;
+    font-size: 17px;
 }
 
 .portfolio ul.categories {
-    list-style: none;
-    padding: 0;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .portfolio ul.categories li,
 .portfolio ul.categories li a {
     height: 45px;
-    padding: auto 45px;
-    margin: auto 7px;
+    line-height: 45px;
     display: inline-block;
+    font-family: "Open Sans Bold", sans-serif;
+    font-size: 15px;
+}
+
+
+.portfolio ul.categories li a {
+    color: #bbbbbb;
+    border: 1px solid #cecece;
+    padding: 0 45px;
+    margin: 0 7px;
+
+
+}
+
+.portfolio ul.categories li.active a {
+    color: #6d6e71;
+    background: white;
+    border: none;
 }
 
 .portfolio div.projects {
@@ -314,28 +507,33 @@ ul.slider li.active p.subheading {
 
 .portfolio div.projects ul {
     display: inline-block;
-    list-style: none;
-    padding: 0;
     width: 1188px;
-    /*text-align: center;*/
 }
 
 .portfolio div.projects ul li {
     display: inline-block;
-    height: 285px;
-    width: 280px;
+    /*height: 285px;*/
+    /*width: 280px;*/
     margin: 7px;
+    padding: 14px;
+    background: white;
 }
 
 .portfolio div.projects ul li a.preview {
     display: inline-block;
     height: 210px;
     width: 250px;
+    background: #f5f5f5;
 }
 
 .portfolio div.projects ul li a.preview img {
     height: 210px;
     width: 250px;
+    line-height: 210px;
+    color: #6d6e71;
+    font-family: "Open Sans Bold", sans-serif;
+    font-size: 16px;
+
 }
 
 .portfolio div.projects ul li div.actions a {
@@ -343,6 +541,24 @@ ul.slider li.active p.subheading {
     display: inline-block;
     width: 49%;
     height: 55px;
+    line-height: 55px;
+    color: #c7c9ce;
+}
+
+.portfolio div.projects ul li div.actions a span {
+    visibility: hidden;
+}
+
+.portfolio a.up {
+    display: block;
+    background: white;
+    height: 100px;
+    width: 100px;
+    line-height: 100px;
+    color: #c7c9ce;
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
 }
 
 .team {
@@ -354,41 +570,71 @@ ul.slider li.active p.subheading {
     width: 410px;
     padding-left: 170px;
     margin-bottom: 80px;
+    color: #6d6e71;
+}
+
+.team > header h2 {
+    font-family: "Open Sans Bold", sans-serif;
+    font-size: 44px;
+}
+
+.team > header p.subheading {
+    font-family: "Open Sans Light", sans-serif;
+    font-size: 17px;
 }
 
 .team ul.members {
-    list-style: none;
-    padding: 0;
     text-align: center;
 }
 
 .team ul.members > li {
     display: inline-block;
-    height: 395px;
-    width: 280px;
+    /*height: 395px;*/
+    /*width: 280px;*/
+    background: #f5f5f5;
+    margin: 7px;
 }
 
 .team ul.members > li > a {
     display: inline-block;
-    height: 305px;
-    width: 280px;
+    /*height: 305px;*/
+    /*width: 280px;*/
+    padding: 14px;
 }
 
 .team ul.members > li > a img {
     width: 140px;
     height: 140px;
+    line-height: 140px;
     display: block;
-    margin: auto;
+    margin: 40px 45px;
+    color: #6d6e71;
+    font-family: "Open Sans Bold", sans-serif;
+    font-size: 24px;
+}
+
+.team ul.members > li > a span.name,
+.team ul.members > li > a span.position {
+    display: block;
+    color: #6d6e71;
 }
 
 .team ul.members > li > a span.name {
-    display: block;
+    font-family: "Open Sans Bold", sans-serif;
+    font-size: 24px;
+}
+
+.team ul.members > li > a span.position {
+    font-family: "Open Sans Light", sans-serif;
+    font-size: 17px;
 }
 
 .team ul.members > li ul.social {
-    list-style: none;
-    padding: 0;
     text-align: center;
+    background: white;
+    margin-bottom: 20px;
+    height: 60px;
+    color: #cdcdcd;
 }
 
 .team ul.members > li ul.social li {
@@ -407,49 +653,32 @@ ul.slider li.active p.subheading {
     visibility: hidden;
 }
 
-.contact {
+.contacts {
     height: 500px;
 }
 
-.contact ul {
-    list-style: none;
-    padding: 0;
+.contacts ul {
+    margin-top: 300px;
     text-align: center;
+
 }
 
-.contact ul li {
+.contacts ul li {
     display: inline-block;
     height: 65px;
     width: 65px;
+    background: white;
+    border: 1px solid #dbdbdb;
 }
 
-.contact ul li > div {
+.contacts ul li.active {
+    background: #1fa9e0;
+    border: 1px solid #1fa9e0;
+}
+
+.contacts ul li > div {
+    display: none;
     visibility: hidden;
-}
-
-.section0 {
-}
-
-.section0 h2 {
-    font-size: 18px;
-}
-
-.section0 p {
-    font-size: 16px;
-}
-
-.section0 .act {
-    display: inline-block;
-    width: 200px;
-    height: 50px;
-    line-height: 50px;
-    background: #FF2B4A;
-    font-family: sans-serif;
-    font-size: 16px;
-    margin-bottom: 40px;
-    color: white;
-    text-align: center;
-    text-decoration: none;
 }
 
 .section0 .act:hover {
@@ -463,6 +692,7 @@ ul.slider li.active p.subheading {
 .page > footer {
     padding-top: 75px;
     height: 265px;
+    background: #2b2c2d;
 }
 
 .page > footer nav.external {
@@ -470,9 +700,7 @@ ul.slider li.active p.subheading {
 }
 
 .page > footer nav.external ul.social {
-    list-style: none;
-    padding: 0;
-    width: 500px;
+    /*width: auto;*/
     float: left;
 }
 
@@ -481,50 +709,118 @@ ul.slider li.active p.subheading {
     width: 20px;
     height: 20px;
     padding: 20px;
+    border-left: 1px solid #414344;
+}
+
+.page > footer nav.external ul.social li:last-child {
+    border-right: 1px solid #414344;
 }
 
 .page > footer nav.external ul.social li a {
     display: inline-block;
     width: 20px;
     height: 20px;
+    color: #414344;
 }
 
 .page > footer nav.external ul.social li a span {
-    /*visibility: hidden;*/
+    visibility: hidden;
 }
 
 .page > footer nav.external form.subscription {
     position: relative;
     width: 595px;
-    height: 65px;
+    /*height: 65px;*/
     float: right;
+    background: #393b3c;
+    padding: 10px;
 }
 
-.page > footer nav.external form.subscription input {
+.page > footer div.container nav.external form.subscription input {
     width: 255px;
     height: 45px;
+    color: #6d6e71;
+    background: transparent;
+    border: none;
+    padding-left: 75px;
+    font-family: "Open Sans Bold", sans-serif;
+    font-size: 14px;
+
 }
 
-.page > footer nav.external form.subscription button {
+.page > footer div.container nav.external form.subscription input::-webkit-input-placeholder,
+.page > footer div.container nav.external form.subscription input::-moz-placeholder,
+.page > footer div.container nav.external form.subscription input:-ms-input-placeholder {
+    color: #6d6e71;
+    font-family: "Open Sans Bold", sans-serif;
+    font-size: 14px;
+}
+
+.page > footer div.container nav.external form.subscription input:focus {
+    outline: 0;
+}
+
+
+.page > footer  div.container nav.external form.subscription button {
     position: absolute;
-    right: 0;
+    right: 10px;
     height: 45px;
     padding: 0 25px;
+    background: #494c4d;
+    border: none;
+    color: #6d6e71;
+    font-family: "Open Sans Bold", sans-serif;
+    font-size: 14px;
 }
 
 .page > footer p.copyright {
-    width: 400px;
-    float: left;
+    position: relative;
+    top: 10px;
+    display: inline-block;
+    color: #6d6e71;
+    /*width: 400px;*/
+    /*float: left;*/
+    font-family: "Open Sans Light", sans-serif;
+    font-size: 13px;
+}
+
+.page > footer nav.external.resources {
+    display: inline-block;
+    width: auto;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
 }
 
 .page > footer nav.external ul.resources {
-    list-style: none;
-    padding: 0;
-    float: right;
+    /*float: right;*/
+    display: inline-block;
 }
 
 .page > footer nav.external ul.resources li {
     display: inline-block;
+    position: relative;
+    padding-left: 14px;
+}
+
+.page > footer nav.external ul.resources li:before {
+    content: '\2219';
+    font-size: 40px;
+    line-height: 18px;
+    color: #6d6e71;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.page > footer nav.external ul.resources li:first-child:before {
+    content: none;
+}
+
+.page > footer nav.external ul.resources li a {
+    color: #6d6e71;
+    font-family: "Open Sans Light", sans-serif;
+    font-size: 13px;
 }
 
 .clearfix:before,
