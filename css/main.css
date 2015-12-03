@@ -743,6 +743,10 @@ ul.slider li.active p.subheading span:before {
     padding-left: 170px;
     margin-bottom: 80px;
     color: #6d6e71;
+
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-image: url("../img/man-icon.png");
 }
 
 .team > header h2 {
@@ -804,6 +808,8 @@ ul.slider li.active p.subheading span:before {
 .team ul.members > li ul.social {
     text-align: center;
     background: white;
+    padding-top: 20px;
+    box-sizing: border-box;
     margin-bottom: 20px;
     height: 60px;
     color: #cdcdcd;
@@ -811,14 +817,39 @@ ul.slider li.active p.subheading span:before {
 
 .team ul.members > li ul.social li {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
+    margin: auto 10px;
 }
 
 .team ul.members > li ul.social li a {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
+}
+
+.team ul.members > li ul.social li.facebook a {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/facebook-icon-team.png");
+}
+
+.team ul.members > li ul.social li.twitter a {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/twitter-icon-team.png");
+}
+
+.team ul.members > li ul.social li.instagram a {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/instagram-icon-team.png");
+}
+
+.team ul.members > li ul.social li.linkedin a {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/linkedin-icon-team.png");
 }
 
 .team ul.members > li ul.social li a span {
