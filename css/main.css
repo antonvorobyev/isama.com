@@ -94,7 +94,7 @@ a:hover {
 }
 
 .page > header nav.external ul.resources li {
-    width: 98px;
+    width: 100px;
     height: 32px;
     display: inline-block;
 }
@@ -102,15 +102,37 @@ a:hover {
 .page > header nav.external ul.resources li a {
     color: #6d6e71;
     display: inline-block;
+    box-sizing: border-box;
     background: white;
-    width: 98px;
+    width: 100px;
     height: 32px;
     line-height: 32px;
     text-align: center;
 
     font-family: "Open Sans Bold";
     font-size: 12px;
+
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
 }
+
+.page > header nav.external ul.resources li.blog a {
+    background-image: url("../img/blog-icon.png");
+}
+
+.page > header nav.external ul.resources li.jobs a {
+    background-image: url("../img/jobs-icon.png");
+}
+
+.page > header nav.external ul.resources li.support a {
+    background-image: url("../img/support-icon.png");
+}
+
+.page > header nav.external ul.resources li.language a {
+    background-image: url("../img/language-icon.png");
+}
+
 
 .page > header nav.external ul.social {
     float: right;
