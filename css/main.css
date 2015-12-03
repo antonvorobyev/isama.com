@@ -169,7 +169,7 @@ a:hover {
     background-image: url("../img/instagram-icon-header.png");
 }
 
-.page > header nav.external ul.social li.googleplus a {
+.page > header nav.external ul.social li.google-plus a {
     background-image: url("../img/googleplus-icon-header.png");
 }
 
@@ -858,6 +858,9 @@ ul.slider li.active p.subheading span:before {
 
 .contacts {
     height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/contacts-bg.jpg");
 }
 
 .contacts ul {
@@ -874,9 +877,27 @@ ul.slider li.active p.subheading span:before {
     border: 1px solid #dbdbdb;
 }
 
-.contacts ul li.active {
-    background: #1fa9e0;
+.contacts ul li .active {
     border: 1px solid #1fa9e0;
+}
+
+.contacts ul li.active.place {
+    background-color: #1fa9e0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/place-icon-contacts.png");
+}
+
+.contacts ul li.mail {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/mail-icon-contacts.png");
+}
+
+.contacts ul li.phone {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/phone-icon-contacts.png");
 }
 
 .contacts ul li > div {
@@ -909,8 +930,8 @@ ul.slider li.active p.subheading span:before {
 
 .page > footer nav.external ul.social li {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     padding: 20px;
     border-left: 1px solid #414344;
 }
@@ -921,9 +942,33 @@ ul.slider li.active p.subheading span:before {
 
 .page > footer nav.external ul.social li a {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     color: #414344;
+}
+
+.page > footer nav.external ul.social li.facebook a {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/facebook-icon-footer.png");
+}
+
+.page > footer nav.external ul.social li.twitter a {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/twitter-icon-footer.png");
+}
+
+.page > footer nav.external ul.social li.instagram a {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/instagram-icon-footer.png");
+}
+
+.page > footer nav.external ul.social li.google-plus a {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/google-plus-icon-footer.png");
 }
 
 .page > footer nav.external ul.social li a span {
@@ -948,7 +993,9 @@ ul.slider li.active p.subheading span:before {
     padding-left: 75px;
     font-family: "Open Sans Bold", sans-serif;
     font-size: 14px;
-
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    background-image: url("../img/newsletter-icon.png");
 }
 
 .page > footer div.container nav.external form.subscription input::-webkit-input-placeholder,
