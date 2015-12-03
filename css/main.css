@@ -150,8 +150,33 @@ a:hover {
 }
 
 .page > header nav.external ul.social li a {
+    display: inline-block;
     width: 65px;
     height: 65px;
+}
+
+.page > header nav.external ul.social li.facebook a {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/facebook-icon-header.png");
+}
+
+.page > header nav.external ul.social li.twitter a {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/twitter-icon-header.png");
+}
+
+.page > header nav.external ul.social li.instagram a {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/instagram-icon-header.png");
+}
+
+.page > header nav.external ul.social li.googleplus a {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/googleplus-icon-header.png");
 }
 
 .page > header nav.external ul.social li a span {
