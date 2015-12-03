@@ -525,6 +525,14 @@ ul.slider li.active p.subheading span:before {
     padding-left: 120px;
     background-repeat: no-repeat;
     background-position: left 30px;
+
+    vertical-align: top;
+}
+
+.service div.container ul li.first-column {
+    border-right: 1px solid #eaeced;
+    padding-right: 60px;
+    margin-right: 80px;
 }
 
 .service div.container ul li.web {
@@ -594,9 +602,15 @@ ul.slider li.active p.subheading span:before {
 .portfolio > header {
     margin: 0 auto;
     width: 410px;
+    height: 160px;
     padding-left: 170px;
     margin-bottom: 80px;
     color: #6d6e71;
+
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-image: url("../img/chemicals-icon.png");
+
 }
 
 .portfolio > header h2 {
