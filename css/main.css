@@ -84,8 +84,8 @@ a:hover {
 
 .page > header nav.external {
     background: #eceef4;
-    height: 65px;
-    line-height: 65px;
+    height: 64px;
+    line-height: 64px;
 }
 
 .page > header nav.external ul.social,
@@ -114,7 +114,9 @@ a:hover {
 
     background-position: 10px center;
     background-repeat: no-repeat;
-    padding-left: 20px;
+    padding-left: 25px;
+
+    border-radius: 5px;
 }
 
 .page > header nav.external ul.resources li.blog a {
