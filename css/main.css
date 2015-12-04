@@ -351,8 +351,8 @@ a:hover {
 }
 
 #slides li:nth-child(2) {
-    right: 370px;
-    bottom: 50px;
+    right: 651px;
+    bottom: 124px;
     background: #75bf29;
     background-position: center;
     background-repeat: no-repeat;
@@ -360,8 +360,8 @@ a:hover {
 }
 
 #slides li:nth-child(3) {
-    right: 50px;
-    bottom: 50px;
+    right: 331px;
+    bottom: 124px;
     background: #feeb75;
     background-position: center;
     background-repeat: no-repeat;
@@ -374,7 +374,8 @@ a:hover {
     background-color: rgba(138, 202, 81, 0.9);
     background-repeat: no-repeat;
     background-image: url("../img/heart-icon-green.png");
-    background-position: 100px center;
+    background-position: 123px center;
+
 }
 
 #slides li:nth-child(3) a.more {
@@ -382,7 +383,7 @@ a:hover {
     background-color: rgba(254, 235, 117, 0.9);
     background-repeat: no-repeat;
     background-image: url("../img/like-icon-yellow.png");
-    background-position: 100px center;
+    background-position: 123px center;
 }
 
 #slides li h2,
@@ -402,7 +403,8 @@ a:hover {
     text-align: center;
     font-family: "Open Sans Semibold", sans-serif;
     font-size: 14px;
-
+    padding-left: 23px;
+    box-sizing: border-box;
 }
 
 #slides li.active {
@@ -436,10 +438,12 @@ a:hover {
 #slides li.active p.subheading {
     position: relative;
     /*margin: 0 auto;*/
-    /*width: auto;*/
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
+    width: auto;
+    /*text-align: center;*/
+    /*display: table-cell;*/
+    /*vertical-align: middle;*/
+    top: 178px;
+    left: 425px;
     visibility: visible;
 }
 
@@ -452,18 +456,19 @@ a:hover {
 
 #slides li.active p.subheading span {
     position: relative;
-    left: 60px;
     z-index: 1;
+    left: -5px;
+    top: -20px;
 }
 
 #slides li.active p.subheading span:before {
     content: '&';
     color: #bbedff;
     position: relative;
-    left: -20px;
+    left: -12px;
     font-family: "Open Sans Bold", sans-serif;
-    font-size: 140px;
-    line-height: 10px;
+    font-size: 122px;
+    line-height: 23px;
     z-index: 1;
 }
 
@@ -495,6 +500,7 @@ a:hover {
 #about div.container > div:nth-child(2) {
     background-image: url("../img/tree-icon.png");
     margin-right: 0;
+
 }
 
 #about div.container > div h2 {
