@@ -52,6 +52,7 @@ a:hover {
 
 .page > header {
     height: 365px;
+    position: relative;
 }
 
 .page > header div.title.container {
@@ -191,13 +192,13 @@ a:hover {
 .page > header ul.contacts {
     display: inline-block;
     bottom: 13px;
-    right: 14px;
+    right: 17px;
     position: absolute;
 }
 
 .page > header ul.contacts li {
     display: inline-block;
-    width: 66px;
+    width: 63px;
     height: 70px;
     /*border-right: 1px solid #bcbec3;*/
     border-right: 1px;
@@ -213,7 +214,7 @@ a:hover {
 
 .page > header ul.contacts li a {
     display: inline-block;
-    width: 66px;
+    width: 63px;
     height: 70px;
     background-position: center;
     background-repeat: no-repeat;
@@ -221,10 +222,12 @@ a:hover {
 
 .page > header ul.contacts li.phone a {
     background-image: url("../img/phone-icon-header.png");
+    background-position-x: 11px;
 }
 
 .page > header ul.contacts li.place a {
     background-image: url("../img/place-icon-header-active.png");
+    background-position-x: 15px;
 }
 
 .page > header ul.contacts li.mail a {
@@ -237,18 +240,25 @@ a:hover {
 }
 
 .page > header nav.internal {
-    position: relative;
+    position: absolute;
     border-top: 1px solid #eceef4;
+    bottom: 0;
+    width: 100%;
 }
 
 .page > header nav.internal ul {
-    width: 800px;
+    padding: 0;
+    text-align: left;
 }
 
 .page > header nav.internal ul li {
     display: inline-block;
-    padding: 10px 10px;
+    padding: 33px 22px;
     border-right: 1px solid #eceef4;
+}
+
+.page > header nav.internal ul li:last-child {
+    border: none;
 }
 
 .page > header nav.internal ul li a {
