@@ -172,7 +172,6 @@ a:hover {
     border-radius: 5px;
 }
 
-
 .page > header nav.external ul.social {
     position: absolute;
     right: 13px;
@@ -221,7 +220,6 @@ a:hover {
 .page > header nav.external ul.social li.twitter a:active {
     background-image: url("../img/twitter-icon-header-active.png");
 }
-
 
 .page > header nav.external ul.social li.instagram a {
     background-image: url("../img/instagram-icon-header.png");
@@ -280,6 +278,12 @@ a:hover {
     height: 70px;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
+}
+
+.page > header ul.contacts:hover li.place a {
+    background-image: url("../img/place-icon-header.png");
+    background-position-x: 15px;
 }
 
 .page > header ul.contacts li.phone a {
@@ -287,7 +291,17 @@ a:hover {
     background-position-x: 11px;
 }
 
+.page > header ul.contacts li.phone a:hover {
+    background-image: url("../img/phone-icon-header-active.png");
+    /*background-position-x: 15px;*/
+}
+
 .page > header ul.contacts li.place a {
+    background-image: url("../img/place-icon-header-active.png");
+    background-position-x: 15px;
+}
+
+.page > header ul.contacts li.place a:hover {
     background-image: url("../img/place-icon-header-active.png");
     background-position-x: 15px;
 }
@@ -296,10 +310,200 @@ a:hover {
     background-image: url("../img/mail-icon-header.png");
 }
 
+.page > header ul.contacts li.mail a:hover {
+    background-image: url("../img/mail-icon-header-active.png");
+    /*background-position-x: 15px;*/
+}
+
 .page > header ul.contacts li a span {
     visibility: hidden;
     display: none;
 }
+
+.page > header ul.contacts:hover li.place a span {
+    visibility: hidden;
+    display: none;
+}
+
+.page > header ul.contacts:hover li.place a span:before {
+    visibility: hidden;
+    display: none;
+}
+
+.page > header ul.contacts li.place a:hover span {
+    visibility: visible;
+    display: inline-block;
+
+    position: absolute;
+    top: -54px;
+    /*width: auto;*/
+    left: -86px;
+    border: 2px solid #D4D4D4;
+    color: #6d6e71;
+    font-family: "Open Sans Light", sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 15px 26px;
+    white-space: nowrap;
+    /*overflow: hidden;*/
+
+
+}
+
+.page > header ul.contacts li.place a:hover span:before{
+    content: "";
+    visibility: visible;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-bottom: 2px solid #D4D4D4;
+    border-right: 2px solid #D4D4D4;
+    position: absolute;
+    left: 103px;
+    top: 45px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+.page > header ul.contacts li.place a span {
+    visibility: visible;
+    display: inline-block;
+
+    position: absolute;
+    top: -54px;
+    /*width: auto;*/
+    left: -86px;
+    border: 2px solid #D4D4D4;
+    color: #6d6e71;
+    font-family: "Open Sans Light", sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 15px 26px;
+    white-space: nowrap;
+    /*overflow: hidden;*/
+
+
+}
+
+.page > header ul.contacts li.place a span:before{
+    content: "";
+    display: block;
+    visibility: visible;
+
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-bottom: 2px solid #D4D4D4;
+    border-right: 2px solid #D4D4D4;
+    position: absolute;
+    left: 103px;
+    top: 45px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+
+.page > header ul.contacts li.phone a:hover span {
+    visibility: visible;
+    display: inline-block;
+
+    position: absolute;
+    top: -54px;
+    /*width: auto;*/
+    left: -63px;
+    border: 2px solid #D4D4D4;
+    color: #6d6e71;
+    font-family: "Open Sans Light", sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 15px 26px;
+    white-space: nowrap;
+    /*overflow: hidden;*/
+
+
+}
+
+.page > header ul.contacts li.phone a:hover span:before{
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-bottom: 2px solid #D4D4D4;
+    border-right: 2px solid #D4D4D4;
+    position: absolute;
+    left: 78px;
+    top: 45px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+.page > header ul.contacts li.mail a:hover span {
+    visibility: visible;
+    display: inline-block;
+
+    position: absolute;
+    top: -54px;
+    /*width: auto;*/
+    left: -56px;
+    border: 2px solid #D4D4D4;
+    color: #6d6e71;
+    font-family: "Open Sans Light", sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 15px 26px;
+    white-space: nowrap;
+    /*overflow: hidden;*/
+
+
+}
+
+.page > header ul.contacts li.mail a:hover span:before{
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-bottom: 2px solid #D4D4D4;
+    border-right: 2px solid #D4D4D4;
+    position: absolute;
+    left: 76px;
+    top: 45px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+
+/*.page > header ul.contacts li.active.place a span:before,*/
+/*.page > header ul.contacts li.active.place a span:after {*/
+/*content: "";*/
+/*left: 10px;*/
+/*top: 70px;*/
+/*width: 40px;*/
+/*height: 40px;*/
+/*background-color: #fff;*/
+/*border: 8px solid #666;*/
+/*-webkit-border-radius: 28px;*/
+/*-moz-border-radius: 28px;*/
+/*border-radius: 28px;*/
+/*}*/
+
+/*.page > header ul.contacts li.active.place a span:after {*/
+/*width: 20px;*/
+/*height: 20px;*/
+/*left: 5px;*/
+/*top: 100px;*/
+/*border-radius: 18px;*/
+/*}*/
 
 .page > header nav.internal {
     position: absolute;
