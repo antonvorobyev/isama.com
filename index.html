@@ -14,6 +14,8 @@
     <meta name="msapplication-starturl" content="http://www.isama.com/index.html?pinned=true">
 
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/vendor/fotorama.css">
+
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="author" href="humans.txt">
@@ -157,9 +159,19 @@
 
 </header>
 
-<ul id="slides" class="slider">
+<ul id="slides" class="slider fotorama"
+    data-width="100%"
+    data-height="885"
+    data-nav="thumbs"
+    data-arrows="true"
+    data-click="true"
+    data-swipe="true"
+    data-navposition="top"
+    data-thumbwidth="320"
+    data-thumbheight="240"
+    data-loop="true">
 
-    <li class="active">
+    <li data-thumb="img/isama-slider-preview.jpg">
         <h2>ISAMA</h2>
 
         <p class="subheading">
@@ -170,7 +182,7 @@
         <a class="more" href="#" title="Like it">Like</a>
     </li>
 
-    <li>
+    <li data-thumb="img/effectiveart-slider-preview.jpg">
         <h2>Effective Art</h2>
 
         <p class="subheading">
@@ -181,7 +193,7 @@
         <a class="more" href="#" title="Like it">Like</a>
     </li>
 
-    <li>
+    <li data-thumb="img/mobileapp-slider-preview.jpg">
         <h2>Mobile Application Design</h2>
 
         <p class="subheading">
@@ -763,7 +775,10 @@
 
 </footer>
 
+
 <script src="js/vendor/jquery-2.1.4.js"></script>
+<script src="js/vendor/fotorama.js"></script>
+
 <script src="js/main.js"></script>
 </body>
 
