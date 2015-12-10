@@ -679,7 +679,6 @@ div.fotorama__thumb-border {
     background-position: center;
     background-repeat: no-repeat;
     background-image: url("../img/mobileapp-slider-preview.jpg");
-
 }
 
 #slides li:nth-child(2) a.more {
@@ -688,7 +687,6 @@ div.fotorama__thumb-border {
     background-repeat: no-repeat;
     background-image: url("../img/heart-icon-green.png");
     background-position: 123px center;
-
 }
 
 #slides li:nth-child(3) a.more {
@@ -835,9 +833,23 @@ div.fotorama__thumb-border {
 }
 
 #services {
-    height: 829px;
+    height: 1054px;
     color: #6d6e71;
-}
+ }
+
+#services:before {
+    width: 74%;
+    height: 55px;
+    margin: 0 auto;
+    content: "";
+    display: block;
+    position: relative;
+    top: 66px;
+    margin-top: -59px;
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-top-color: #EAEBED;
+    border-radius: 149%/82px;}
 
 #services div.container {
     width: 1200px;
@@ -953,6 +965,9 @@ div.fotorama__thumb-border {
     background: #efefef;
     position: relative;
     padding-top: 43px;
+
+    border: none;
+    border-radius: 54%/34px 34px 0 0;
 }
 
 #portfolio > header {
@@ -992,8 +1007,9 @@ div.fotorama__thumb-border {
     /*padding-left: 110px;*/
 }
 
-#portfolio ul.categories li,
-#portfolio ul.categories li a {
+/*#portfolio ul.categories li,*/
+/*#portfolio ul.categories li button {*/
+#portfolio ul.categories button {
     height: 45px;
     line-height: 45px;
     display: inline-block;
@@ -1002,7 +1018,12 @@ div.fotorama__thumb-border {
     border-radius: 5px;
 }
 
-#portfolio ul.categories li a {
+/*#portfolio ul.categories li,*/
+/*#portfolio ul.categories li button {*/
+#portfolio ul.categories button {
+    outline: none;
+
+    text-decoration: none;
     color: #bbbbbb;
     border: 2px solid #cecece;
     padding: 0 45px;
@@ -1010,7 +1031,9 @@ div.fotorama__thumb-border {
 
 }
 
-#portfolio ul.categories li.active a {
+/*#portfolio ul.categories li.active,*/
+/*#portfolio ul.categories li button.active {*/
+#portfolio ul.categories button.active {
     color: #6d6e71;
     background: white;
     border: 2px solid white;
