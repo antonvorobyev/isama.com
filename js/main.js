@@ -81,15 +81,28 @@ $(document).ready(function () {
 
     $grid.shuffle({});
 
-    $('#portfolio .projects > ul > li:nth-child(3) a').click();
+    $('#portfolio .projects > ul > button:nth-child(3)').click();
 
+    function initialize() {
 
-    //var $grid = $('#portfolio .projects > ul'),
-    //    $sizer = $grid.find('.shuffle__sizer');
-    //
-    //$grid.shuffle({
-    //                  itemSelector: '#portfolio .projects > ul > li',
-    //                  sizer: $sizer
-    //              });
-    //
+        var mapProp = {
+            center: new google.maps.LatLng(24.65, 46.71),
+            zoom: 15,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            disableDefaultUI: true
+        };
+        var map = new google.maps.Map(document.getElementById("map"), mapProp);
+
+        var image = 'img/marker-icon.png';
+
+        var marker = new google.maps.Marker({
+                position: {lat: 24.651, lng: 46.72},
+                icon: image,
+                map: map
+            });
+
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
 });
