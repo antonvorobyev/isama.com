@@ -1280,40 +1280,267 @@ div.fotorama__thumb-border {
     position: absolute;
     bottom: 68px;
     left: 43%;
-    z-index: 100;
+    /*z-index: 100;*/
 }
 
 #contacts ul li {
     display: inline-block;
     height: 62px;
     width: 62px;
-    background: white;
-    border: 1px solid #dbdbdb;
     border-radius: 8px;
     margin-left: 10px;
 }
 
 #contacts ul li .active {
+}
+
+#contacts ul li a {
+    position: relative;
+}
+
+#contacts ul li a {
+    height: 62px;
+    width: 62px;
+    border-radius: 8px;
+
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+
+
+}
+
+#contacts ul li.place a span {
+    display: block;
+    visibility: visible;
+}
+
+#contacts ul:hover li.place a {
+    background-image: url("../img/place-icon-contacts.png");
+    background-color: white;
+    border: 1px solid #dbdbdb;
+
+}
+
+#contacts ul:hover li.place a span {
+    display: none;
+    visibility: hidden;
+}
+
+#contacts ul li.place a,
+#contacts ul li.place a:hover {
+    background-color: #1fa9e0;
+    background-image: url("../img/place-icon-contacts-active.png");
     border: 1px solid #1fa9e0;
 }
 
-#contacts ul li.active.place {
-    background-color: #1fa9e0;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("../img/place-icon-contacts.png");
+#contacts ul li a span {
+    /*max-width: 140px;*/
+    text-align: left;
 }
 
-#contacts ul li.mail {
-    background-position: center;
-    background-repeat: no-repeat;
+#contacts ul li.place a:hover span {
+    display: block;
+    visibility: visible;
+}
+
+
+#contacts ul li a:hover span {
+    display: block;
+    visibility: visible;
+}
+
+
+#contacts ul li.mail a {
     background-image: url("../img/mail-icon-contacts.png");
 }
 
-#contacts ul li.phone {
-    background-position: center;
-    background-repeat: no-repeat;
+#contacts ul li.mail a:hover {
+    background-color: #1fa9e0;
+    background-image: url("../img/mail-icon-contacts-active.png");
+    border: 1px solid #1fa9e0;
+}
+
+
+#contacts ul li.phone a {
     background-image: url("../img/phone-icon-contacts.png");
+}
+
+#contacts ul li.phone a:hover {
+    background-color: #1fa9e0;
+    background-image: url("../img/phone-icon-contacts-active.png");
+    border: 1px solid #1fa9e0;
+}
+
+#contacts ul li.place a span i {
+    /*display: block;*/
+    font-style: normal;
+}
+
+#contacts ul:hover li.place a span:before {
+    visibility: hidden;
+    display: none;
+}
+
+#contacts ul li.place a:hover span {
+    visibility: visible;
+    display: inline-block;
+
+    position: absolute;
+    bottom: 77px;
+    /*width: auto;*/
+    left: -81px;
+    border: 1px solid #D4D4D4;
+    color: #6d6e71;
+    font-family: "Open Sans Light", sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 15px 26px;
+    white-space: nowrap;
+    /*overflow: hidden;*/
+    background-color: white;
+
+}
+
+#contacts ul li.place a:hover span:before {
+    content: "";
+    visibility: visible;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #D4D4D4;
+    border-right: 1px solid #D4D4D4;
+    position: absolute;
+    left: 103px;
+    bottom: -9px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+#contacts ul li.place a span {
+    visibility: visible;
+    display: inline-block;
+
+    position: absolute;
+    bottom: 77px;
+    /*width: auto;*/
+    left: -81px;
+    border: 1px solid #D4D4D4;
+    color: #6d6e71;
+    font-family: "Open Sans Light", sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 15px 26px;
+    white-space: nowrap;
+    /*overflow: hidden;*/
+    background-color: white;
+
+}
+
+#contacts ul li.place a span:before {
+    content: "";
+    display: block;
+    visibility: visible;
+
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #D4D4D4;
+    border-right: 1px solid #D4D4D4;
+    position: absolute;
+    left: 103px;
+    bottom: -9px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    background-color: white;
+}
+
+#contacts ul li.phone a:hover span {
+    visibility: visible;
+    display: inline-block;
+
+    position: absolute;
+    bottom: 77px;
+    /*width: auto;*/
+    left: -55px;
+    border: 1px solid #D4D4D4;
+    color: #6d6e71;
+    font-family: "Open Sans Light", sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 15px 26px;
+    white-space: nowrap;
+    /*overflow: hidden;*/
+    background-color: white;
+
+}
+
+#contacts ul li.phone a:hover span:before {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #D4D4D4;
+    border-right: 1px solid #D4D4D4;
+    position: absolute;
+    left: 78px;
+    bottom: -9px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+#contacts ul li.mail a:hover span {
+    visibility: visible;
+    display: inline-block;
+
+    position: absolute;
+    bottom: 77px;
+    /*width: auto;*/
+    left: -55px;
+    border: 1px solid #D4D4D4;
+    color: #6d6e71;
+    font-family: "Open Sans Light", sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 15px 26px;
+    white-space: nowrap;
+    /*overflow: hidden;*/
+    background-color: white;
+
+}
+
+#contacts ul li.mail a:hover span:before {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #D4D4D4;
+    border-right: 1px solid #D4D4D4;
+    position: absolute;
+    left: 76px;
+    bottom: -9px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+
+#contacts ul li a span {
+    visibility: hidden;
+    display: none;
+
 }
 
 #contacts ul li > div {
