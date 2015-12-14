@@ -1001,7 +1001,7 @@ div.fotorama__thumb-border {
     margin-left: 35px;
 }
 
-#portfolio ul.categories {
+#portfolio div.categories {
     text-align: center;
     margin-bottom: 30px;
     /*padding-left: 110px;*/
@@ -1009,7 +1009,7 @@ div.fotorama__thumb-border {
 
 /*#portfolio ul.categories li,*/
 /*#portfolio ul.categories li button {*/
-#portfolio ul.categories button {
+#portfolio div.categories button {
     height: 45px;
     line-height: 45px;
     display: inline-block;
@@ -1020,7 +1020,7 @@ div.fotorama__thumb-border {
 
 /*#portfolio ul.categories li,*/
 /*#portfolio ul.categories li button {*/
-#portfolio ul.categories button {
+#portfolio div.categories button {
     outline: none;
 
     text-decoration: none;
@@ -1033,7 +1033,7 @@ div.fotorama__thumb-border {
 
 /*#portfolio ul.categories li.active,*/
 /*#portfolio ul.categories li button.active {*/
-#portfolio ul.categories button.active {
+#portfolio div.categories button.active {
     color: #6d6e71;
     background: white;
     border: 2px solid white;
